@@ -1,3 +1,15 @@
+// Vars
+const navShell = document.getElementById("navShell");
+const menuBtn = document.getElementById("menuBtn");
+const reveals = document.querySelectorAll(".reveal");
+const counters = document.querySelectorAll("[data-count]");
+const skillBars = document.querySelectorAll(".bar span");
+const typedText = "I love building websites ";
+const typedEl = document.getElementById("typed-text");
+const aboutSection = document.getElementById("about");
+
+
+
 document.body.classList.add("loading");
 
 window.addEventListener("load", () => {
@@ -16,8 +28,7 @@ window.addEventListener("load", () => {
   }, 1800);
 });
 
-const navShell = document.getElementById("navShell");
-const menuBtn = document.getElementById("menuBtn");
+
 
 if (menuBtn && navShell) {
   menuBtn.addEventListener("click", () => {
@@ -41,7 +52,6 @@ if (menuBtn && navShell) {
   });
 }
 
-const reveals = document.querySelectorAll(".reveal");
 
 if (reveals.length) {
   const revealObserver = new IntersectionObserver(
@@ -59,7 +69,6 @@ if (reveals.length) {
   reveals.forEach((el) => revealObserver.observe(el));
 }
 
-const counters = document.querySelectorAll("[data-count]");
 
 if (counters.length) {
   const countObserver = new IntersectionObserver(
@@ -92,7 +101,6 @@ if (counters.length) {
   counters.forEach((counter) => countObserver.observe(counter));
 }
 
-const skillBars = document.querySelectorAll(".bar span");
 
 if (skillBars.length) {
   const skillObserver = new IntersectionObserver(
@@ -141,9 +149,7 @@ function showToast(message = "Message sent successfully — demo only ✨") {
   }, 2400);
 }
 
-const typedText = "I love building websites ";
-const typedEl = document.getElementById("typed-text");
-const aboutSection = document.getElementById("about");
+
 
 if (typedEl && aboutSection) {
   let index = 0;
@@ -179,3 +185,22 @@ if (typedEl && aboutSection) {
 
   typingObserver.observe(aboutSection);
 }
+
+
+
+emailjs.init({
+  publicKey: 'zzNwLqn3Sfd_4diRd',
+});
+
+
+
+ const sendEmail = (e) => {
+  e.preventDefault();
+
+  emailjs.sendForm('service_d87gvpn', 'template_230ef6i', e.target)
+    .then((result) => {
+        console.log('SUCCESS!', result.text);
+    }, (error) => {
+        console.log('FAILED...', error.text);
+    });
+};

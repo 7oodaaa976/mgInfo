@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mahmoud | Premium Portfolio</title>
+    <title>Mahmoud</title>
+
     <meta
       name="description"
       content="Creative Web Developer building premium, responsive, and animated websites with HTML, CSS, and JavaScript."
@@ -384,15 +385,17 @@
 
               <div class="project-card-body">
                 <div class="project-top-row">
-                  <span class="project-type">Dashboard UI</span>
-                  <span class="project-status">Case Study</span>
+                  <span class="project-type"> E-Commerce Platform</span>
+                  <span class="project-status">RouteProject</span>
                 </div>
 
-                <h3>Operations Dashboard Interface</h3>
+                <h3>fresh-ecommerce</h3>
                 <p>
-                  A dashboard concept designed with clean stats, structured
-                  cards, useful layout organization, and a modern dark visual
-                  system.
+                  A modern e-commerce web application built with Next.js,
+                  featuring a clean product browsing experience, responsive
+                  layouts, and a scalable UI system using Shadcn components.
+                  Designed to deliver smooth navigation, fast performance, and a
+                  premium shopping experience.
                 </p>
 
                 <div class="project-tags">
@@ -547,41 +550,82 @@
                     <span>Alexandria, Egypt</span>
                   </div>
                 </div>
+                <div class="contact-item">
+                  <div
+                    class="icon-box"
+                    style="
+                      margin: 0;
+                      width: 46px;
+                      height: 46px;
+                      font-size: 1rem;
+                    "
+                  >
+                    ☎
+                  </div>
+                  <div>
+                    <strong>WhatsApp</strong>
+                    <a href="https://wa.me/201212694594" target="_blank">
+                      Chat on WhatsApp
+                    </a>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <div
+                    class="icon-box"
+                    style="
+                      margin: 0;
+                      width: 46px;
+                      height: 46px;
+                      font-size: 1rem;
+                    "
+                  >
+                    in
+                  </div>
+                  <div>
+                    <strong>LinkedIn</strong>
+                    <a
+                      href="https://www.linkedin.com/in/mahmoud-gamea-91b24838b/"
+                      target="_blank"
+                    >
+                      View Profile
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
 
             <div class="contact-card reveal">
-              <form
-                class="contact-form"
-                onsubmit="
-                  event.preventDefault();
-                  showToast();
-                "
-              >
+              <form class="contact-form" id="contactForm">
                 <input
                   class="field"
                   type="text"
+                  name="name"
                   placeholder="Your Name"
                   required
                 />
                 <input
                   class="field"
                   type="email"
+                  name="email"
                   placeholder="Your Email"
                   required
                 />
                 <input
                   class="field full"
                   type="text"
+                  name="title"
                   placeholder="Subject"
                   required
                 />
                 <textarea
                   class="field full"
+                  name="message"
                   placeholder="Tell me about your project"
                   required
                 ></textarea>
-                <button class="btn btn-primary full" type="submit">
+
+                <button class="btn btn-primary full" type="submit" id="sendBtn">
                   Send Message
                 </button>
               </form>
@@ -594,13 +638,15 @@
     <footer class="footer">
       <div class="container footer-inner">
         <p>
-          © 2026 Mahmoud Mohamed
+          ©Mahmoud Mohamed
           <img src="imgs/mFavIcoN-removebg-preview (1).png" width="30" alt="" />
         </p>
       </div>
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script src="js/js.js"></script>
+
+    
   </body>
   <div id="page-loader">
     <div class="loader-backdrop"></div>
