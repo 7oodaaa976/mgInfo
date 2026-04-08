@@ -188,19 +188,3 @@ if (typedEl && aboutSection) {
 
 
 
-emailjs.init({
-  publicKey: 'zzNwLqn3Sfd_4diRd',
-});
-
-
-
- const sendEmail = (e) => {
-  e.preventDefault();
-
-  emailjs.sendForm('service_d87gvpn', 'template_230ef6i', e.target)
-    .then((result) => {
-        console.log('SUCCESS!', result.text);
-    }, (error) => {
-        console.log('FAILED...', error.text);
-    });
-};
